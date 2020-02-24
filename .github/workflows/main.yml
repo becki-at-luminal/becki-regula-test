@@ -1,5 +1,4 @@
 on: [push]
-
 jobs:
   regula_job:
     runs-on: ubuntu-latest
@@ -8,7 +7,7 @@ jobs:
     - uses: actions/checkout@master
     - name: Regula
       id: regula
-      uses: fugue/regula-action@v0.1.0
+      uses: fugue/regula-action@master
       with:
         terraform_directory: .
         rego_paths: /opt/regula/rules example_custom_rule
